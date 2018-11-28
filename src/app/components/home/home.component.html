@@ -1,0 +1,44 @@
+<div class="encabezado">
+
+    <div class="cat-deseada">
+        <h2 name="tituloPCategoria"> {{ catdeseada }} </h2>
+    </div>
+
+    <div class="opciones-filtrado">
+        <span (click)="verCategoria('pc')"> Películas en cartelera </span>
+        <span (click)="verCategoria('mp')"> Más populares </span>
+        <span (click)="verCategoria('pn')"> Para niños </span>
+        <span (click)="verCategoria('cc')"> Clacificación </span>
+        <!-- <ul class="selector-shortcut sibling-fade">
+            <li (click)="verCategoria('up')">Últimas películas</li>
+            <li (click)="verCategoria('mp')">Más populares</li>
+            <li (click)="verCategoria('pn')">Para niños</li>
+            <li (click)="verCategoria('pc')">Clacificación C</li>
+        </ul> -->
+    </div>
+
+
+</div>
+<div class="cont-body">
+    <!-- <app-tarjetas-peliculas [peliculas]="peliculas"></app-tarjetas-peliculas> -->
+    <div class="cont-peliculas">
+        <ng-container>
+            <h2 class="cat-peliculas">Categoría de la pelicula</h2>
+            <div class="cont-peliculas-iz">
+                <div class="cont-peliculas-grid">
+                    <div class="movie-horizontal" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w300//xgbeBCjmFpRYHDF7tQ7U98EREWp.jpg)'}"></div>
+                    <div class="movie-vertical" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w300/qz2dTKSQ9VSAswb1O9jWS15jqL1.jpg)'}"></div>
+                    <div class="movie-vertical" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w300/qz2dTKSQ9VSAswb1O9jWS15jqL1.jpg)'}"></div>
+                </div>
+            </div>
+
+            <div class="cont-peliculas-dr">
+                <div class="cont-peliculas-grid">
+                    <div class="movie-vertical" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w300/qz2dTKSQ9VSAswb1O9jWS15jqL1.jpg)'}"></div>
+                    <div class="movie-vertical" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w300/qz2dTKSQ9VSAswb1O9jWS15jqL1.jpg)'}"></div>
+                    <div class="movie-horizontal" [ngStyle]="{'background-image': 'url(https://image.tmdb.org/t/p/w300//xgbeBCjmFpRYHDF7tQ7U98EREWp.jpg)'}"></div>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+.cont-peliculas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(1fr, 270.7px));
+    grid-gap: 15px;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+/* div.pelicula-individual {
+    height: 100%;
+} */
+
+img {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+div.info-pelicula {
+    background-color: rgb(0, 0, 0);
+    padding: 8px 8px;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    color: white;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+p.titulo {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+p.overview {
+    font-size: 14px;
+}
+
+
+/* corte al texto */
+
+.cont-overview {
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    height: 87px;
+    line-height: 1;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+
+/*------------------------------------------
+      Efecto de aparición de informacón.
+--------------------------------------------*/
+
+
+/* texto de información de la pelicula */
+
+.info-pelicula {
+    display: none;
+    transition: .5s ease;
+    opacity: 1;
+    margin-top: -150%;
+}
+
+.pelicula-individual:hover img {
+    opacity: 0.15;
+    cursor: pointer;
+}
+
+.pelicula-individual:hover .info-pelicula {
+    opacity: 1;
+    display: grid;
+    grid-row: auto;
+    cursor: pointer;
+    position: unset;
+}

@@ -1,0 +1,41 @@
+<div class="cont-peliculas">
+
+    <div class="pelicula-individual" *ngFor="let pelicula of peliculas">
+        <img [src]="pelicula.poster_path" [alt]="pelicula.title" class="image">
+
+        <div class="info-pelicula">
+
+            <div class="cont-titulo">
+                <p class="titulo"> {{pelicula.title}}</p>
+            </div>
+
+            <div class="cont-overview">
+                <p class="overview"> {{ pelicula.overview }} </p>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<!--
+<div class="cont-peliculas">
+
+    <div class="pelicula-individual" *ngFor="let pelicula of peliculas">
+        <img [src]="pelicula.poster_path" [alt]="pelicula.title" class="image">
+
+        <div class="info-pelicula">
+
+            <div class="cont-titulo">
+                <p class="titulo"> {{pelicula.title}}</p>
+            </div>
+
+            <div class="cont-overview">
+                <p class="overview"> {{ pelicula.overview }} </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div> -->
